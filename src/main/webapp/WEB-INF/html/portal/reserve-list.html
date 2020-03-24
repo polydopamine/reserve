@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>实验仪器预约系统</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/portal/reserve-list.css"/>
+<body>
+<div class="page-wrap">
+    <!--定宽布局-->
+    <div class="page-con">
+        <div class="w">
+            <div class="user-title">欢迎回来<span id="realname"></span></div>
+            <div class="user-title">您有<span id="test-uncompleted-times"></span>项预约中的测试，总共成功预约<span id="test-total-times"></span>次</div>
+            <div class="user-box">
+                <table class="user-reserve">
+                    <tr class="table-head">
+                        <th width="10%">序号</th>
+                        <th width="20%">仪器名称</th>
+                        <th width="20%">测试开始时间</th>
+                        <th width="20%">测试结束时间</th>
+                        <th width="10%"></th>
+                        <th width="10%"></th>
+                        <th width="10%"></th>
+                    </tr>
+                    <!--<tbody>-->
+                    <!--</tbody>-->
+                </table>
+                <div class="link-item">
+                    <a href="/inst/list" class="link">仪器列表/预约新测试</a>
+                    <a href="/user/edit" class="link">个人信息</a>
+                    <a href="/user/logout.do" class="link" >注销</a>
+                    <!--在js逻辑中进行跳转-->
+                    <span id="edit-user-info"></span>
+                </div>
+                <div class="admin-item">
+                    <a href="/admin/inst/list" class="link">仪器管理</a>
+                    <a href="/admin/user/list" class="link">用户管理</a>
+                    <a href="/admin/lab/list" class="link">课题组信息管理</a>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="w">
+                    <div class="links">
+                        <a href="https://www.isiknowledge.com/" class="link" target="_bland">Web of Science</a> |
+                        <a href="http://tool.yovisun.com/scihub/" class="link" target="_bland">SCI-Hub</a> |
+                        <a href="https://www.cnki.net/" class="link" target="_bland">知网</a> |
+                        <a href="http://polymer.zju.edu.cn/" class="link" target="_bland">浙江大学高分子系</a> |
+                        <a href="http://www.cc98.org/" class="link" target="_bland">CC98</a>
+                    </div>
+                    <p class="copyright">
+                        Copyright ©2020 polydopmine.icu All Right Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="../../../resources/js/portal/reserve-list.js"></script>
+<script type="text/javascript" src="../../../resources/js/common-util.js"></script>
+<script type="text/javascript" src="../../../resources/js/service/user-service.js"></script>
+</body>
+</html>

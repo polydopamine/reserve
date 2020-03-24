@@ -1,0 +1,88 @@
+/*页面整体*/
+body{
+    background: url("../../image/background2-1.jpg") no-repeat;
+    /*background-position: center center;*/
+    /*background-attachment: fixed;*/
+    background-size: cover;
+}
+.page-wrap{
+    padding: 40px 0;
+    /*background: #ff44;*/
+}
+.login-con{
+    margin: 0 auto;
+    text-align: center;
+    /*position: relative;*/
+    width: 400px;
+    /* r:red g:green b:blue a:alpha(半透明):0-1,1是不透明，0是全透明 */
+    background: rgba(255, 255, 255, .4);
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    vertical-align: center;
+    position: relative;
+    top: 50%; /*偏移*/
+    margin-top: 150px;
+    padding-bottom: 10px;
+}
+
+/*大标题*/
+.user-title{
+    /*text-align: center;*/
+    padding: 10px 0;
+    border-bottom: 2px solid #eee;
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+}
+/*所有输入的部分*/
+.user-box{
+    position: relative;
+    /*padding: 0 400px;*/
+}
+/*异常框，正常情况下隐藏*/
+.error-item{
+    /*display: none;*/
+}
+/*图标设定*/
+/*图标与输入框在同一行*/
+.icon{
+    display: inline;
+    vertical-align: middle;
+    background: #eee;
+    border: #999 solid 1px;
+}
+.error-item{
+    padding: 0 30px;
+    background: #FFC0CB;
+    color: red;
+    border: 1px solid red;
+}
+.error-icon{
+    height: 20px;
+    width: 20px;
+    background: none;
+    border: none;
+}
+.error-item, .user-item{
+    margin: 20px 0;
+    vertical-align: middle;
+}
+.user-content{
+    margin: 0 0 0 -5px;
+    height: 30px;
+    vertical-align: middle;
+    width: 200px;
+    outline: none;
+    font-size: 16px;
+    padding-left: 5px;
+    border: #999 solid 1px;;
+}
+.link-item{
+    margin-top: 5px;
+}
+.footer{
+    color: white;
+}
+.links a{
+    color: white;
+}

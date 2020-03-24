@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>实验仪器预约系统</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/portal/reserve-edit.css"/>
+<body>
+<div class="page-wrap">
+    <div class="page-con">
+        <!--定宽布局-->
+        <div class="w">
+            <div class="user-title">预约信息编辑</div>
+
+            <div class="instrument">
+                <span class="subtitle instrument-name">凝胶渗透色谱</span>
+                <span class="subtitle instrument-wait-count">当前排队人数，<span class="person-num"></span>人</span>
+            </div>
+
+            <div class="test-time">
+                <div class="sub-subtitle start-time">
+                    <span>测试开始时间：</span><span class="real-start-time"></span>
+                    <form name="reg_testdate1" class="edit-start-time">
+                        <select name="YYYY" class="select start-year" οnchange="YYYYDD1(this.value)">
+                            <option value="">请选择 年</option>
+                        </select>
+                        <select name="MM" class="select start-month" οnchange="MMDD1(this.value)">
+                            <option value="">选择 月</option>
+                        </select>
+                        <select name="DD" class="select start-day" id="DD">
+                            <option value="">选择 日</option>
+                        </select>
+                        <select name="HH" class="select start-hour" id="HH">
+                            <option value="">选择 时</option>
+                        </select>
+                        <select name="MI" class="select start-minute">
+                            <option value="">选择 分</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="sub-subtitle end-time">
+                    <span>测试结束时间：</span><span class="real-end-time"></span>
+                    <form name="reg_testdate2" class="edit-end-time">
+                        <select name="YYYY" class="select end-year" οnchange="YYYYDD2(this.value)">
+                            <option value="">请选择 年</option>
+                        </select>
+                        <select name="MM" class="select end-month" οnchange="MMDD2(this.value)">
+                            <option value="">选择 月</option>
+                        </select>
+                        <select name="DD" class="select end-day">
+                            <option value="">选择 日</option>
+                        </select>
+                        <select name="HH" class="select end-hour">
+                            <option value="">选择 时</option>
+                        </select>
+                        <select name="MI" class="select end-minute">
+                            <option value="">选择 分</option>
+                        </select>
+                    </form>
+                </div>
+                <div id="submit" class="btn btn-submit">提交更改</div>
+            </div>
+
+            <div class="subtitle">仪器预约情况</div>
+
+            <table class="user-reserve">
+                <tr class="table-head">
+                    <th>序号</th>
+                    <th>仪器名称</th>
+                    <th>预约者</th>
+                    <th>测试开始时间</th>
+                    <th>测试结束时间</th>
+                </tr>
+                <!--<tbody>-->
+                <!--</tbody>-->
+                <!--$("user-reserve").append(tr);-->
+            </table>
+
+
+            <div class="link-item">
+                <a href="/inst/list" class="link">仪器列表/预约新测试</a>
+                <a href="/reserve/list" class="link">返回个人主页</a>
+                <a href="/user/logout.do" class="link">注销</a>
+            </div>
+            <div class="footer">
+                <div class="w">
+                    <div class="links">
+                        <a href="https://www.isiknowledge.com/" class="link" target="_bland">Web of Science</a> |
+                        <a href="http://tool.yovisun.com/scihub/" class="link" target="_bland">SCI-Hub</a> |
+                        <a href="https://www.cnki.net/" class="link" target="_bland">知网</a> |
+                        <a href="http://polymer.zju.edu.cn/" class="link" target="_bland">浙江大学高分子系</a> |
+                        <a href="http://www.cc98.org/" class="link" target="_bland">CC98</a>
+                    </div>
+                    <p class="copyright">
+                        Copyright ©2020 polydopmine.icu All Right Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="../../../resources/js/portal/reserve-edit.js"></script>
+<script type="text/javascript" src="../../../resources/js/service/reserve-service.js"></script>
+<script type="text/javascript" src="../../../resources/js/date-util.js"></script>
+<script type="text/javascript" src="../../../resources/js/common-util.js"></script>
+<script type="text/javascript" src="../../../resources/js/service/user-service.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>实验仪器预约系统</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/backend/instrument-list.css"/>
+<body>
+<div class="page-wrap">
+    <div class="page-con">
+        <!--定宽布局-->
+        <div class="w">
+            <div class="user-title"><span class="username"></span></div>
+            <div class="user-title">仪器列表</div>
+            <div class="user-box">
+                <table class="user-reserve">
+                    <tr class="table-head">
+                        <th width="10%">序号</th>
+                        <th width="20%">仪器名称</th>
+                        <th width="20%">仪器型号</th>
+                        <th width="20%">存放地点</th>
+                        <th width="15%"></th>
+                        <th width="15%"></th>
+                    </tr>
+                    <!--<tbody>-->
+                    <!--<tr class="table-body"><td>index</td><td>item.name</td><td>item.model</td><td>item.location</td><td class="reserve">立即预约</td>-->
+                    <!--</tbody>-->
+                </table>
+                <div class="link-item">
+                    <a href="/user/edit" class="link"></a>
+                    <a href="/reserve/list" class="link">返回个人主页</a>
+                    <a href="/admin/inst/add" class="link">添加仪器</a>
+                    <a href="/user/logout.do" class="link">注销</a>
+                </div>
+                <div class="footer">
+                    <div class="w">
+                        <div class="links">
+                            <a href="https://www.isiknowledge.com/" class="link" target="_bland">Web of Science</a> |
+                            <a href="http://tool.yovisun.com/scihub/" class="link" target="_bland">SCI-Hub</a> |
+                            <a href="https://www.cnki.net/" class="link" target="_bland">知网</a> |
+                            <a href="http://polymer.zju.edu.cn/" class="link" target="_bland">浙江大学高分子系</a> |
+                            <a href="http://www.cc98.org/" class="link" target="_bland">CC98</a>
+                        </div>
+                        <p class="copyright">
+                            Copyright ©2020 polydopmine.icu All Right Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="../../../resources/js/backend/instrument-list.js"></script>
+<script type="text/javascript" src="../../../resources/js/common-util.js"></script>
+<script type="text/javascript" src="../../../resources/js/service/user-service.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://D:/01_courses/ssm_to_springboot/src/main/main.iml" filepath="D:/01_courses/ssm_to_springboot/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reserve.iml" filepath="$PROJECT_DIR$/reserve.iml" />
+    </modules>
+  </component>
+</project>

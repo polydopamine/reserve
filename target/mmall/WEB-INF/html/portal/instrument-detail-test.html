@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>实验仪器预约系统</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/portal/instrument-detail.css"/>
+<body>
+<div class="page-wrap">
+    <div class="page-con">
+        <!--定宽布局-->
+        <div class="w">
+            <div class="user-title">仪器详情</div>
+
+            <div class="middle">
+                <div class="detail">
+                    <div class="sub-subtitle detail-item">
+                        <span class="bold-title detail-name">仪器名称：</span>
+                        <span id="inst-name"></span>
+                    </div>
+                    <!--<div class="detail-item">-->
+                    <!--<span class="detail-name">品牌</span>-->
+                    <!--<span class="inst-brand"></span>-->
+                    <!--</div>-->
+                    <div class="sub-subtitle detail-item">
+                        <span class="bold-title detail-name">型号：</span>
+                        <span id="inst-model"></span>
+                    </div>
+                    <div class="sub-subtitle detail-item">
+                        <span class="bold-title detail-name">存放地点：</span>
+                        <span id="inst-location"></span>
+                    </div>
+                    <div class="sub-subtitle detail-item">
+                        <span class="bold-title detail-name">所属实验室：</span>
+                        <span id="inst-lab-name"></span>
+                    </div>
+                    <div class="sub-subtitle detail-item">
+                        <span class="bold-title detail-name">状态：</span>
+                        <span id="inst-status"></span>
+                    </div>
+                    <div class="sub-subtitle detail-item">
+                        <span class="bold-title detail-description">描述：</span>
+                        <span id="inst-description"></span>
+                    </div>
+                    <div class="sub-subtitle detail-item">
+                        <span class="bold-title detail-name">待进行的测试数：</span>
+                        <span id="inst-uncompleted-times"></span>
+                    </div>
+                    <div class="sub-subtitle detail-item">
+                        <span class="bold-title detail-name">总测试数：</span>
+                        <span id="inst-totle-times"></span>
+                    </div>
+                </div>
+                <span class="image">
+                    <img src="" id="inst-image"/>
+                </span>
+            </div>
+
+            <div class="table">
+                <br/>
+                <div class="subtitle2 title2">仪器预约情况</div>
+                <table class="user-reserve">
+                    <tr class="table-head">
+                        <th>序号</th>
+                        <th>仪器名称</th>
+                        <th>预约者</th>
+                        <th>测试开始时间</th>
+                        <th>测试结束时间</th>
+                    </tr>
+                    <!--<tbody>-->
+                    <!--</tbody>-->
+                    <!--$("user-reserve").append(tr);-->
+                </table>
+            </div>
+            <div id="reserve" class="btn btn-submit">立即预约</div><br/>
+            <a href="/reserve/list" class="link">返回个人主页</a>
+            <a href="/user/logout.do" class="link">注销</a>
+            <div class="footer">
+                <div class="w">
+                    <div class="links">
+                        <a href="https://www.isiknowledge.com/" class="link" target="_bland">Web of Science</a> |
+                        <a href="http://tool.yovisun.com/scihub/" class="link" target="_bland">SCI-Hub</a> |
+                        <a href="https://www.cnki.net/" class="link" target="_bland">知网</a> |
+                        <a href="http://polymer.zju.edu.cn/" class="link" target="_bland">浙江大学高分子系</a> |
+                        <a href="http://www.cc98.org/" class="link" target="_bland">CC98</a>
+                    </div>
+                    <p class="copyright">
+                        Copyright ©2020 polydopmine.icu All Right Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="../../../resources/js/portal/instrument-detail.js"></script>
+<script type="text/javascript" src="../../../resources/js/common-util.js"></script>
+<script type="text/javascript" src="../../../resources/js/service/user-service.js"></script>
+</body>
+</html>

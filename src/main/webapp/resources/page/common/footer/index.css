@@ -1,0 +1,22 @@
+/*
+* @Author: wsh
+* @Date:   2020-03-04 19:19:06
+* @Last Modified by:   wsh
+* @Last Modified time: 2020-03-04 19:22:37
+*/
+.footer{
+    padding-bottom: 10px;
+}
+.footer .links{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+.footer .links .link{
+    padding: 0 10px;
+}
+.footer .copyright{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>实验仪器预约系统</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/backend/instrument-add.css"/>
+<body>
+<div class="page-wrap">
+    <div class="page-con">
+        <!--定宽布局-->
+        <div class="w">
+            <div class="page-con">
+                <div class="user-title">仪器添加</div>
+                <div class="user-box">
+                    <!--错误提示框-->
+                    <div class="error-item">
+                        <img src="../../../resources/image/icon/error-red.svg" alt="" class="icon error-icon"/>
+                        <span class="error-msg">Error</span>
+                    </div>
+                    <!--用户填充表单-->
+                    <div class="user-item">
+                        <span class="input-tip">仪器名称：</span>
+                        <img src="../../../resources/image/icon/instrument.svg" alt="" class="icon"/>
+                        <input type="text" class="user-content" id="name" placeholder="请输入仪器名称" autocomplete="off"/>
+                    </div>
+                    <div class="user-item">
+                        <span class="input-tip">仪器型号：</span>
+                        <img src="../../../resources/image/icon/model.svg" alt="" class="icon"/>
+                        <input type="text" class="user-content" id="model" placeholder="请输入仪器型号" autocomplete="off"/>
+                    </div>
+                    <div class="user-item">
+                        <span class="input-tip">存放位置：</span>
+                        <img src="../../../resources/image/icon/location.svg" alt="" class="icon"/>
+                        <input type="text" class="user-content" id="location" placeholder="请输存放位置" autocomplete="off"/>
+                    </div>
+                    <div class="user-item">
+                        <span class="input-tip">描述：</span>
+                        <img src="../../../resources/image/icon/description.svg" alt="" class="icon"/>
+                        <input type="text" class="user-content" id="description" placeholder="请输入描述" autocomplete="off"/>
+                    </div>
+                    <div class="user-item">
+                        <span class="input-tip">图片id：</span>
+                        <img src="../../../resources/image/icon/image.svg" alt="" class="icon"/>
+                        <input type="text" class="user-content" id="image" placeholder="请输入图片id" autocomplete="off"/>
+                    </div>
+                    <!--从后台取数据-->
+                    <div class="user-item">
+                        <span class="input-tip">课题组：</span>
+                        <img src="../../../resources/image/icon/lab.svg" alt="" class="icon"/>
+                        <select name="lab" id="lab">
+                        </select>
+                    </div>
+                    <div id="submit" class="btn btn-submit">添加仪器</div>
+                    <div class="link-item">
+                        <a href="/reserve/list" class="link">返回个人主页</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="w">
+                    <div class="links">
+                        <a href="https://www.isiknowledge.com/" class="link" target="_bland">Web of Science</a> |
+                        <a href="http://tool.yovisun.com/scihub/" class="link" target="_bland">SCI-Hub</a> |
+                        <a href="https://www.cnki.net/" class="link" target="_bland">知网</a> |
+                        <a href="http://polymer.zju.edu.cn/" class="link" target="_bland">浙江大学高分子系</a> |
+                        <a href="http://www.cc98.org/" class="link" target="_bland">CC98</a>
+                    </div>
+                    <p class="copyright">
+                        Copyright ©2020 polydopmine.icu All Right Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="../../../resources/js/backend/instrument-add.js"></script>
+<script type="text/javascript" src="../../../resources/js/common-util.js"></script>
+<script type="text/javascript" src="../../../resources/js/service/user-service.js"></script>
+<script type="text/javascript" src="../../../resources/js/service/instrument-service.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.reserve.dao.ReserveInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.reserve.pojo.ReserveInfo" >
+    <constructor >
+      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="user_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="user_realname" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="inst_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="inst_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="test_start_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="test_end_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="enable_status" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="is_completed" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_id, user_realname, inst_id, inst_name, test_start_time, test_end_time, enable_status, 
+    is_completed, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from reserve_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from reserve_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.reserve.pojo.ReserveInfo" >
+    insert into reserve_info (id, user_id, user_realname, 
+      inst_id, inst_name, test_start_time, 
+      test_end_time, enable_status, is_completed, 
+      create_time, update_time)
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{userRealname,jdbcType=VARCHAR}, 
+      #{instId,jdbcType=INTEGER}, #{instName,jdbcType=VARCHAR}, #{testStartTime,jdbcType=TIMESTAMP}, 
+      #{testEndTime,jdbcType=TIMESTAMP}, #{enableStatus,jdbcType=INTEGER}, #{isCompleted,jdbcType=TINYINT}, 
+      now(), now())
+  </insert>
+  <insert id="insertSelective" parameterType="com.reserve.pojo.ReserveInfo" >
+    insert into reserve_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="userRealname != null" >
+        user_realname,
+      </if>
+      <if test="instId != null" >
+        inst_id,
+      </if>
+      <if test="instName != null" >
+        inst_name,
+      </if>
+      <if test="testStartTime != null" >
+        test_start_time,
+      </if>
+      <if test="testEndTime != null" >
+        test_end_time,
+      </if>
+      <if test="enableStatus != null" >
+        enable_status,
+      </if>
+      <if test="isCompleted != null" >
+        is_completed,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userRealname != null" >
+        #{userRealname,jdbcType=VARCHAR},
+      </if>
+      <if test="instId != null" >
+        #{instId,jdbcType=INTEGER},
+      </if>
+      <if test="instName != null" >
+        #{instName,jdbcType=VARCHAR},
+      </if>
+      <if test="testStartTime != null" >
+        #{testStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="testEndTime != null" >
+        #{testEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="isCompleted != null" >
+        #{isCompleted,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null" >
+        now(),
+      </if>
+      <if test="updateTime != null" >
+        now(),
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.reserve.pojo.ReserveInfo" >
+    update reserve_info
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userRealname != null" >
+        user_realname = #{userRealname,jdbcType=VARCHAR},
+      </if>
+      <if test="instId != null" >
+        inst_id = #{instId,jdbcType=INTEGER},
+      </if>
+      <if test="instName != null" >
+        inst_name = #{instName,jdbcType=VARCHAR},
+      </if>
+      <if test="testStartTime != null" >
+        test_start_time = #{testStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="testEndTime != null" >
+        test_end_time = #{testEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        enable_status = #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="isCompleted != null" >
+        is_completed = #{isCompleted,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = now(),
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.reserve.pojo.ReserveInfo" >
+    update reserve_info
+    set user_id = #{userId,jdbcType=INTEGER},
+      user_realname = #{userRealname,jdbcType=VARCHAR},
+      inst_id = #{instId,jdbcType=INTEGER},
+      inst_name = #{instName,jdbcType=VARCHAR},
+      test_start_time = #{testStartTime,jdbcType=TIMESTAMP},
+      test_end_time = #{testEndTime,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=INTEGER},
+      is_completed = #{isCompleted,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = now()
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectByLabId" resultMap="BaseResultMap" parameterType="int">
+    select
+    <include refid="Base_Column_List"/>
+    from reserve_info
+    <if test="labId != null">
+      where lab_id = #{labId}
+    </if>
+  </select>
+
+  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="int">
+    select
+    <include refid="Base_Column_List"/>
+    from reserve_info
+    where user_id = #{userId}
+    order by test_start_time desc
+  </select>
+
+  <select id="selectUncompletedByUserId" resultMap="BaseResultMap" parameterType="int">
+    select
+    <include refid="Base_Column_List"/>
+    from reserve_info
+    where user_id = #{userId}
+    and is_completed = 0
+    order by test_start_time desc
+  </select>
+
+  <select id="selectByInstId" resultMap="BaseResultMap" parameterType="int">
+    select
+    <include refid="Base_Column_List"/>
+    from reserve_info
+    where inst_id = #{instId}
+    order by test_start_time desc
+  </select>
+
+  <select id="selectUncompletedByInstId" resultMap="BaseResultMap" parameterType="int">
+    select
+    <include refid="Base_Column_List"/>
+    from reserve_info
+    where inst_id = #{instId}
+    and is_completed = 0
+    order by test_start_time desc
+  </select>
+
+  <delete id="deleteByPrimaryKeyAndUserId" parameterType="map">
+    delete from reserve_info
+    where id = #{reserveId}
+    and user_id = #{userId}
+  </delete>
+
+  <select id="selectByPrimaryKeyAndUserId" resultMap="BaseResultMap" parameterType="map">
+    select
+    <include refid="Base_Column_List"/>
+    from reserve_info
+    where id = #{reserveId}
+    and user_id = #{userId}
+  </select>
+
+  <update id="setCompleteByIdUserId" parameterType="map">
+    update reserve_info
+    set is_completed = 1
+    where user_id = #{userId}
+    and id = #{reserveId}
+  </update>
+</mapper>

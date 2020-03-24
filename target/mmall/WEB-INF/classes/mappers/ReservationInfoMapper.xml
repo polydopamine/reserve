@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.reserve.dao.ReservationInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.reserve.pojo.ReservationInfo" >
+    <constructor >
+      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="user_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="inst_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="test_start_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="test_end_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="enable_status" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="is_completed" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_id, inst_id, test_start_time, test_end_time, enable_status, is_completed, 
+    create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from reservation_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from reservation_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.reserve.pojo.ReservationInfo" >
+    insert into reservation_info (id, user_id, inst_id, 
+      test_start_time, test_end_time, enable_status, 
+      is_completed, create_time, update_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{instId,jdbcType=INTEGER}, 
+      #{testStartTime,jdbcType=TIMESTAMP}, #{testEndTime,jdbcType=TIMESTAMP}, #{enableStatus,jdbcType=INTEGER}, 
+      #{isCompleted,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.reserve.pojo.ReservationInfo" >
+    insert into reservation_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="instId != null" >
+        inst_id,
+      </if>
+      <if test="testStartTime != null" >
+        test_start_time,
+      </if>
+      <if test="testEndTime != null" >
+        test_end_time,
+      </if>
+      <if test="enableStatus != null" >
+        enable_status,
+      </if>
+      <if test="isCompleted != null" >
+        is_completed,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="instId != null" >
+        #{instId,jdbcType=INTEGER},
+      </if>
+      <if test="testStartTime != null" >
+        #{testStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="testEndTime != null" >
+        #{testEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="isCompleted != null" >
+        #{isCompleted,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.reserve.pojo.ReservationInfo" >
+    update reservation_info
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="instId != null" >
+        inst_id = #{instId,jdbcType=INTEGER},
+      </if>
+      <if test="testStartTime != null" >
+        test_start_time = #{testStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="testEndTime != null" >
+        test_end_time = #{testEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        enable_status = #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="isCompleted != null" >
+        is_completed = #{isCompleted,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.reserve.pojo.ReservationInfo" >
+    update reservation_info
+    set user_id = #{userId,jdbcType=INTEGER},
+      inst_id = #{instId,jdbcType=INTEGER},
+      test_start_time = #{testStartTime,jdbcType=TIMESTAMP},
+      test_end_time = #{testEndTime,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=INTEGER},
+      is_completed = #{isCompleted,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,178 @@
+/*
+* @Author: wsh
+* @Date:   2020-03-04 15:10:42
+* @Last Modified by:   wsh
+* @Last Modified time: 2020-03-04 17:14:44
+*/
+/*css reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /*background: #f6f6f6;*/
+    font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
+    background: #ddd;
+    /*background-position: center center;*/
+    /*background-attachment: fixed;*/
+    background-size: cover;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    border: none;
+}
+label{
+    cursor: pointer;
+}
+input[type='checkbox']{
+    cursor: pointer;
+}
+select{
+    margin: 0 0 0 -5px;
+    height: 32px;
+    vertical-align: middle;
+    width: 207px;
+    outline: none;
+    font-size: 16px;
+    padding-left: 2px;
+    border: #999 solid 1px;;
+}
+table {
+    margin: 10px auto;
+    text-align: center;
+    width: 800px;
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+table th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+}
+table td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}
+.select{
+    margin: auto;
+    width: 80px;
+}
+/*定宽布局*/
+.w{
+    width: 1080px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+/*panel*/
+.panel{
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.panel .panel-title{
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.panel .panel-body{
+    padding: 10px;
+    overflow: hidden;
+}
+/*全局通用样式*/
+/*隐藏类*/
+.hide{
+    display: none;
+}
+/*超链样式*/
+.link{
+    color: #999;
+    cursor: pointer;
+    text-decoration: none;
+}
+.link:hover{
+    color: #e80012;
+}
+.link-text{
+    color: #999;
+    text-decoration: none;
+}
+/*btn*/
+.btn{
+    display: inline-block;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    border: none;
+    background: #033849;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-mini{
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    padding: 0 10px;
+}
+/*loading*/
+.loading{
+    margin: 10px auto;
+    display: block;
+    width: 65px;
+    height: 65px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: url(../image/icon/loading.gif) no-repeat;
+    opacity: .6;
+}
+.icon{
+    height: 30px;
+    width: 30px;
+}
+.footer{
+    color: #222;
+    position: fixed;
+    bottom: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+.footer .copyright{
+    padding: 5px 0;
+}
+.links a{
+    color: #222;
+}
+.subtitle{
+    margin: 10px 0;
+    vertical-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.sub-subtitle{
+    margin: 10px 0;
+    padding-bottom: 10px;
+    vertical-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #222;
+}

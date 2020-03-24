@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>实验仪器预约系统</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../../../resources/css/portal/user-register.css"/>
+<body>
+<div class="page-wrap">
+    <!--定宽布局-->
+    <div class="w">
+        <div class="page-con">
+            <div class="user-title">用户注册</div>
+            <div class="user-box">
+                <!--错误提示框-->
+                <div class="error-item">
+                    <img src="../../../resources/image/icon/error-red.svg" alt="" class="icon error-icon"/>
+                    <span class="error-msg">Error</span>
+                </div>
+                <!--用户填充表单-->
+                <div class="user-item">
+                    <span class="input-tip">用户名：</span>
+                    <img src="../../../resources/image/icon/user.svg" alt="" class="icon"/>
+                    <input type="text" class="user-content" id="username" placeholder="请输入用户名" autocomplete="off"/>
+                </div>
+                <div class="user-item">
+                    <span class="input-tip">真实姓名：</span>
+                    <img src="../../../resources/image/icon/user.svg" alt="" class="icon"/>
+                    <input type="text" class="user-content" id="realname" placeholder="请输入真实姓名" autocomplete="off"/>
+                </div>
+                <div class="user-item">
+                    <span class="input-tip">密码：</span>
+                    <img src="../../../resources/image/icon/password.svg" alt="" class="icon"/>
+                    <input type="password" class="user-content" id="password" placeholder="请输入密码" autocomplete="off"/>
+                </div>
+                <div class="user-item">
+                    <span class="input-tip">确认密码：</span>
+                    <img src="../../../resources/image/icon/password.svg" alt="" class="icon"/>
+                    <input type="password" class="user-content" id="password-confirm" placeholder="请输入密码" autocomplete="off"/>
+                </div>
+                <div class="user-item">
+                    <span class="input-tip">电话：</span>
+                    <img src="../../../resources/image/icon/phone.svg" alt="" class="icon"/>
+                    <input type="text" class="user-content" id="phone" placeholder="请输入电话" autocomplete="off"/>
+                </div>
+                <div class="user-item">
+                    <span class="input-tip">邮箱：</span>
+                    <img src="../../../resources/image/icon/email.svg" alt="" class="icon"/>
+                    <input type="text" class="user-content" id="email" placeholder="请输入邮箱" autocomplete="off"/>
+                </div>
+                <div class="user-item">
+                    <span class="input-tip">学号：</span>
+                    <img src="../../../resources/image/icon/student.svg" alt="" class="icon"/>
+                    <input type="text" class="user-content" id="student-id" placeholder="请输入学号" autocomplete="off"/>
+                </div>
+                <div class="user-item">
+                    <span class="input-tip">用户身份：</span>
+                    <img src="../../../resources/image/icon/role.svg" alt="" class="icon"/>
+                    <select name="role" id="role">
+                        <option value="1" id="1">教师</option>
+                        <option value="2" id="2">博士后</option>
+                        <option value="3" id="3">工作人员</option>
+                        <option value="4" id="4">博士生</option>
+                        <option value="5" id="5">硕士生</option>
+                        <option value="6" id="6">本科生</option>
+                    </select>
+                </div>
+                <div class="user-item">
+                    <span class="input-tip">入学年份：</span>
+                    <img src="../../../resources/image/icon/year.svg" alt="" class="icon"/>
+                    <select name="year" id="year">
+                    </select>
+                </div>
+                <!--从后台取数据-->
+                <div class="user-item">
+                    <span class="input-tip">课题组：</span>
+                    <img src="../../../resources/image/icon/lab.svg" alt="" class="icon"/>
+                    <select name="lab" id="lab">
+                    </select>
+                </div>
+                <div id="submit" class="btn btn-submit">立即注册</div>
+                <div class="link-item">
+                    <a href="/user/login" class="link">返回登录</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="w">
+                <div class="links">
+                    <a href="https://www.isiknowledge.com/" class="link" target="_bland">Web of Science</a> |
+                    <a href="http://tool.yovisun.com/scihub/" class="link" target="_bland">SCI-Hub</a> |
+                    <a href="https://www.cnki.net/" class="link" target="_bland">知网</a> |
+                    <a href="http://polymer.zju.edu.cn/" class="link" target="_bland">浙江大学高分子系</a> |
+                    <a href="http://www.cc98.org/" class="link" target="_bland">CC98</a>
+                </div>
+                <p class="copyright">
+                    Copyright ©2020 polydopmine.icu All Right Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="../../../resources/js/portal/user-register.js"></script>
+<script type="text/javascript" src="../../../resources/js/common-util.js"></script>
+<script type="text/javascript" src="../../../resources/js/service/user-service.js"></script>
+</body>
+</html>
